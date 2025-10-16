@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: guessgame
+    namespace: guessgame
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: guessgame
+    template:
+       metadata:
+         labels:
+           app: guessgame
+    spec:
+     containers:
+        -name: guessgame
+        image: dockerio/dananjayagmbk/guessgame:latest
+        port:
+        -containerPort: 8080
+
+               
+
+
+
+
+

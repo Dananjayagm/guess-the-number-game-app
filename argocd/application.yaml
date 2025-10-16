@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guessgame
+  namespace: argocd
+spec:
+  project: default
+  source: 
+    repoURL: https://github.com/Dananjayagm/guess-the-number-gamme-app.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: guessgame
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true 
+

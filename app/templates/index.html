@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Guess the number </title>
+</head>
+<body>
+ <h1>guess the Number (1 - 100)</h1>
+ <p>Tries: {{ tries }} </p>
+ {% if message %}
+ <p><strong>{{ message}}</strong> </p>
+ {% endif%}
+ <form method="post">
+	 <input  name= "guess" type="number" min="1" max="100" required />
+	 <button type="submit"> Guess </button> 
+</form>	 
+<p><em>Refresh to start a new game if you won</em</p>>
+
+</body>
+</html>
+
+
+
+

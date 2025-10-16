@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: guessgame
+  namespace: guessgame
+    
+spec:
+  
+  rules:
+  - host: guessgame.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: guessgame
+            port:
+              number: 80
