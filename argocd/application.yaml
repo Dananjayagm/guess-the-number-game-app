@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source: 
-    repoURL: https://github.com/Dananjayagm/guess-the-number-gamme-app.git
+    repoURL: 'https://github.com/Dananjayagm/guess-the-number-gamme-app.git'
     targetRevision: main
     path: k8s
   destination:
